@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 // create context
 const PostContext = createContext();
@@ -8,16 +8,25 @@ console.log(PostContext);
 //define provider
 function PostProvider({ children }) {
     //3 define initial state
-    const [postData, setPostData] = useState({
-        title: 'cicciogamaer',
-        content: 'paitelo'
-    })
+    const [postData, setPostData] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:3000/api/v1/social/')
+            .then(res => res.json())
+            .then(data => {
+                setPostData(data)
+
+            })
+            .catch(err => console.error(err))
+    }, [])
+
+    console.log(postData);
 
     return (
-        <PostProvider.Provider value={{ postData, setPostData }} >
+        <PostContext.Provider value={{ postData, setPostData }}>
             {children}
-        </PostProvider.Provider>
-    )
+        </PostContext.Provider>
+    );
 }
 
 //custom hook to use data into components

@@ -1,17 +1,17 @@
-export default function Card() {
+export default function Card({ content, img, title }) {
     return (
         <>
-
-            <div className="card col-4">
-                <div className="card-header">
-                    <img src="diocane.png" alt="" />
-                </div>
-                <div className="card-body">
-                    <h2>title</h2>
-                    <p>description</p>
+            <div className="col-4">
+                <div className="card h-100 text-center">
+                    <div className="card-header">
+                        <img src={img} alt="" />
+                    </div>
+                    <div className="card-body">
+                        <h2>{title}</h2>
+                        <p>{content}</p>
+                    </div>
                 </div>
             </div>
-
         </>
     )
 }
