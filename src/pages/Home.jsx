@@ -1,7 +1,11 @@
+import List from "../components/List"
+
 export default function Home() {
     return (
         <>
-            <h1>home</h1>
+            <main className="py-5">
+                <List />
+            </main>
         </>
     )
 }
