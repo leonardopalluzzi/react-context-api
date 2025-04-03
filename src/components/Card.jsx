@@ -4,7 +4,7 @@ export default function Card() {
 
             <div className="card col-4">
                 <div className="card-header">
-                    <img src="" alt="" />
+                    <img src="diocane.png" alt="" />
                 </div>
                 <div className="card-body">
                     <h2>title</h2>
