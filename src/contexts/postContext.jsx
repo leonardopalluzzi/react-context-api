@@ -25,7 +25,7 @@ function usePostContext() {
 
     const context = useContext(PostContext)
     console.log(context);
-    return context
+    return context;
 }
 
 // hook and provider export

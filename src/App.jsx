@@ -6,17 +6,17 @@ import { PostProvider } from './contexts/PostContext';
 function App() {
 
   return (
-    <>
-      <PostProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route Component={DefaultLayout}>
-              <Route path="/" Component={Home} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </PostProvider>
-    </>
+
+    <PostProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route Component={DefaultLayout}>
+            <Route path="/" Component={Home} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </PostProvider>
+
   )
 }
 

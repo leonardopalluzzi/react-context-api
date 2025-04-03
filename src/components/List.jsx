@@ -1,9 +1,9 @@
 import Card from "./Card"
-import { usePostContext } from "../contexts/PostContext"
+// import { usePostContext } from "../contexts/PostContext"
 
 export default function List() {
 
-    const { postData } = usePostContext()
+    // const { postData } = usePostContext()
 
     return (
         <>
