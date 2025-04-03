@@ -12,7 +12,7 @@ export default function List() {
             <div className="container">
                 <div className="row gy-4">
                     {postData.map(item => (
-                        <Card content={item.content} img={item.image} title={item.title} />
+                        <Card key={item.id} content={item.content} img={item.image} title={item.title} />
                     ))
                     }
                 </div>
